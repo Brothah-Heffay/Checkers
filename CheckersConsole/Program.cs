@@ -11,7 +11,7 @@ namespace CheckersConsole
         static void Main(string[] args)
         {
             Console.WriteLine("Commit #2");
-
+            //Tyler is in the house
             Console.ReadLine();
         }
     }

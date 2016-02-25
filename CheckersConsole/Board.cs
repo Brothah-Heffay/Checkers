@@ -21,6 +21,39 @@ namespace CheckersConsole
                     board[i, j] = new Space(white);
                 }
             }
+
+            for (int i = 0; i < 3; i++)
+            {
+                for(int j = 0; j < 8; j++)
+                {
+                    if(!(board[i,j].isSpaceWhite))
+                    {
+                        board[i, j].addPiece(false);
+                    }                    
+                }
+            }
+            for (int i = 5; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if (!(board[i, j].isSpaceWhite))
+                    {
+                        board[i, j].addPiece(true);
+                    }
+                }
+            }
+        }
+
+        public void display()
+        {
+            for (int i = 0; i < 8; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    Console.Write(board[i, j].character);
+                }
+                Console.Write("\n");
+            }
         }
     }
 }

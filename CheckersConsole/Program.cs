@@ -10,8 +10,8 @@ namespace CheckersConsole
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Commit #2");
-            //Tyler is in the house
+            Board b = new Board();
+            b.display();
             Console.ReadLine();
         }
     }

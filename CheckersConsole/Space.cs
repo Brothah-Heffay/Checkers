@@ -8,15 +8,17 @@ namespace CheckersConsole
 {
     class Space
     {
-        bool hasPiece { get; set; }
-        bool isSpaceWhite { get; }        //True: space is white, false: black
-        bool isPieceWhite { get; set; }   //True: piece is white, false: black
+        public bool hasPiece { get; set; }
+        public bool isSpaceWhite { get; }        //True: space is white, false: black
+        public bool isPieceWhite { get; set; }   //True: piece is white, false: black
+        public char character { get; set; }      //a char that represents the space
         
         public Space(bool isWhite, bool hasPiece = false, bool isPieceWhite = false)
         {
             isSpaceWhite = isWhite;
             this.hasPiece = hasPiece;
             this.isPieceWhite = isPieceWhite;
+            character = ' ';
         }
 
         public void addPiece(bool isPieceWhite)
@@ -25,6 +27,14 @@ namespace CheckersConsole
             {
                 hasPiece = true;
                 this.isPieceWhite = isPieceWhite;
+                if (isPieceWhite)
+                {
+                    character = 'W';
+                }
+                else
+                {
+                    character = 'B';
+                }
             }
         }
 
@@ -33,6 +43,7 @@ namespace CheckersConsole
             if(hasPiece == true)
             {
                 hasPiece = false;
+                character = ' ';
             }
         }
     }

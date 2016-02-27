@@ -8,8 +8,9 @@ namespace CheckersConsole
 {
     class Board
     {
-        Space[,] board = new Space[8,8];
+        Space[,] board = new Space[8,8];  //The actual 2D array of spaces
 
+        //Constructor that creates the starting position for the beginning of the game
         public Board()
         {
             for (int i = 0; i < 8; i++)
@@ -44,6 +45,7 @@ namespace CheckersConsole
             }
         }
 
+        //Rudimentary board display method
         public void display()
         {
             for (int i = 0; i < 8; i++)

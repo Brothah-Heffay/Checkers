@@ -31,11 +31,11 @@ namespace CheckersConsole
                 this.isPieceWhite = isPieceWhite;
                 if (isPieceWhite)
                 {
-                    character = 'W';
+                    character = 'w';
                 }
                 else
                 {
-                    character = 'B';
+                    character = 'b';
                 }
             }
         }
